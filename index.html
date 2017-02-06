@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+
+<script src="./js/react.min.js"></script>
+<script src="./js/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+<script type="text/babel">
+"use strict";
+
+var HelloWorld = React.createClass({
+
+  render: function() {
+    return (
+      <h1>Hello World!!!</h1>
+    );
+  },
+
+});
+
+var mainElement = document.getElementById("main");
+
+ReactDOM.render(<HelloWorld></HelloWorld>, mainElement);
+</script>
+
+
+<div id="mountpoint">
+
+</div>
+<div id="main"></div>
+<main></main>
+</body>
+</html>
