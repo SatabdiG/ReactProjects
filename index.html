@@ -10,10 +10,24 @@
 "use strict";
 
 var HelloWorld = React.createClass({
+  getInitialState:function()
+  {
+	  return{
+	  count:0
+	  };
+  },
+  handleClick:function()
+  {
+  	this.setState({
+  	count:this.state.count+1,
+  	});
+  },	
 
   render: function() {
     return (
-      <h1>Hello World!!!</h1>
+      <button onClick={this.handleClick} >
+      	Click me to increment count : {this.state.count}
+      </button>
     );
   },
 
@@ -24,10 +38,6 @@ var mainElement = document.getElementById("main");
 ReactDOM.render(<HelloWorld></HelloWorld>, mainElement);
 </script>
 
-
-<div id="mountpoint">
-
-</div>
 <div id="main"></div>
 <main></main>
 </body>
